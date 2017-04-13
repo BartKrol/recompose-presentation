@@ -1,0 +1,2 @@
+const withLoader = branch(props => props.isLoading, Loader)
+export default withLoader(MyWidget)

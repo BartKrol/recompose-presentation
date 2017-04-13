@@ -1,0 +1,8 @@
+function MovieCard({ movie }) {
+  return <Card image={ movie.poster }>
+    <Header>{ movie.title }</Header>
+    <Text>{ movie.description }</Text>
+    <CastInfo actors={ movie.actors } />
+    <CommentsSection comments={ movie.commends } />
+  </Card>
+}

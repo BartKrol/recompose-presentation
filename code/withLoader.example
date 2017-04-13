@@ -1,0 +1,11 @@
+function withLoader(Component) {
+  return ({ isLoading }) {
+    if (isLoading) {
+      return <Loader />
+    } else {
+      return <Component />
+    }
+  }
+}
+
+export default withLoader(MyWidget)

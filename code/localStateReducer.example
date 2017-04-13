@@ -1,0 +1,19 @@
+const withBuffer = compose({
+  renameProp('users', 'previousUsers'),
+  withReducer('users', 'dispatch', usersReducer,
+   props => props.previousUsers),
+  withHandlers({
+    addUser: () => ({ dispatch }) =>
+      dispatch({ type: ADD_USER, user: createEmptyUser() }),
+
+    removeUser: (user) => ({ dispatch }) =>
+      dispatch({ type: REMOVE_USER, user }),
+
+    reset: () => ({ modifyUsers }) =>
+      dispatch({ type: RESET, users: previousUsers }),
+      
+    save: () => ({ modifyUsers }) =>
+      modifyUsers(users)
+  }),
+  pure
+})

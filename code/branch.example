@@ -1,0 +1,4 @@
+const branch = curry((predicateFn, Comp1, Comp2) => 
+  props => predicateFn(props)
+    ? <Comp1 { ...props } />
+    : <Comp2 { ...props } />)

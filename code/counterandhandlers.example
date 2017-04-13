@@ -1,0 +1,10 @@
+const withCount = compose(
+  withState('counter', 'setCounter', 0),
+  withHandlers({
+    increment: event =>
+      ({ setCounter }) => setCounter(n => n + 1)
+    decrement: event =>
+      ({ setCounter }) => setCounter(n => n - 1)
+  }),
+  pure
+)

@@ -1,0 +1,5 @@
+function withState(
+  stateName: string,      // counter
+  stateUpdater: string    // setCount
+  initialState: any       // 0
+)
