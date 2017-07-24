@@ -3,6 +3,6 @@ function MovieCard({ movie }) {
     <Header>{ movie.title }</Header>
     <Text>{ movie.description }</Text>
     <CastInfo actors={ movie.actors } />
-    <CommentsSection comments={ movie.commends } />
+    <CommentsSection comments={ movie.comments } />
   </Card>
 }
